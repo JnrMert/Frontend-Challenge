@@ -1,6 +1,11 @@
+import React, { useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import data from "../data/data";
+
 function Footer() {
-  return <div>Footer</div>;
+  const { language } = useLanguage();
+  const { footer } = data[language];
+
   return (
     <div className="footer-container container mx-auto bg-white dark:bg-myDarkG dark:text-white flex flex-col items-center pt-24 pb-6 lg:justify-center lg:flex-row">
       <div className="text-4xl font-medium text-center w-1/2 lg:text-center lg:p-6">

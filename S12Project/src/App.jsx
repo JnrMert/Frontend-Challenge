@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import "./index.css";
 import Header from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,6 +23,7 @@ function App() {
       <Project />
       <Footer />
       <ThemeProvider>
+        <LanguageProvider>
           <DataProvider>
             <div className={theme === "dark" ? "dark-theme" : "light-theme"}>
               <Header />
@@ -36,6 +38,7 @@ function App() {
               />
             </div>
           </DataProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </>
   );
