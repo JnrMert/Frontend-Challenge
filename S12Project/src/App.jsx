@@ -17,11 +17,6 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Profile />
-      <Skills />
-      <Project />
-      <Footer />
       <ThemeProvider>
         <LanguageProvider>
           <DataProvider>
