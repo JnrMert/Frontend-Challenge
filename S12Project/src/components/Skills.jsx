@@ -1,4 +1,3 @@
-import React from 'react'
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { SkillsData } from "../data/SkillsData";
@@ -9,8 +8,6 @@ function Skills() {
   const skillsTitle = data[language].skillsTitle;
 
   return (
-    <div>Skills</div>
-  )
     <div className="container mx-auto flex flex-col items-center py-20 bg-white text-center dark:bg-myDarkG">
       <h1 className="text-4xl font-bold mb-12 dark:text-white">
         {skillsTitle}
@@ -43,5 +40,4 @@ function Skills() {
   );
 }
 
-export default Skillsexport default Skills;
 export default Skills;
