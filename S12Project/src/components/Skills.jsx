@@ -7,6 +7,7 @@ import data from "../data/data";
 function Skills() {
   const { language } = useLanguage();
   const skillsTitle = data[language].skillsTitle;
+
   return (
     <div>Skills</div>
   )
@@ -43,3 +44,4 @@ function Skills() {
 }
 
 export default Skillsexport default Skills;
+export default Skills;
