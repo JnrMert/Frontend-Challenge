@@ -9,6 +9,9 @@ import Profile from "./components/Profile";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import { LanguageProvider, useLanguage } from "./context/LanguageContext";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   const { theme } = useTheme();
