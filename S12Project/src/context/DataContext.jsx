@@ -7,7 +7,7 @@ const DataContext = createContext();
 export const useData = () => useContext(DataContext);
 
 export const DataProvider = ({ children }) => {
-  const { language } = useLanguage(); // currentLang yerine language kullanılmalı
+  const { language } = useLanguage();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -28,7 +28,7 @@ export const DataProvider = ({ children }) => {
     };
 
     fetchData();
-  }, [language]); // Sadece language'e bağımlı hale getirildi
+  }, [language]); //
 
   return (
     <DataContext.Provider value={{ data, loading }}>

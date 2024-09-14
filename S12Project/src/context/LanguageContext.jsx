@@ -3,9 +3,8 @@ import axios from "axios";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import data from "../data/data";
 
-// LanguageContext oluşturulması
+// LanguageContext
 export const LanguageContext = createContext();
 
 // LanguageProvider bileşeni
@@ -13,7 +12,7 @@ export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useLocalStorage("language", "tr"); // Varsayılan olarak 'tr'
   const [isInitialLoad, setIsInitialLoad] = useState(true); // İlk yükleme kontrolü
 
-  // Toast mesajını gösterme fonksiyonu
+  // Toast gösterme
   const showToast = (message, type = "success") => {
     toast[type](message, {
       position: "top-right",
@@ -51,5 +50,4 @@ export const LanguageProvider = ({ children }) => {
   );
 };
 
-// Custom hook for using the language context
 export const useLanguage = () => useContext(LanguageContext);
