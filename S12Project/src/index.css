@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-gradient-to-r-dark {
+  background-image: linear-gradient(to right, #2a262b, #484148);
+}
+
+.bg-gradient-to-r-light {
+  background-image: linear-gradient(to right, #f4f4f4, #ffffff);
+}
+
+.light-mode .text-light-mode {
+  color: black;
+}
