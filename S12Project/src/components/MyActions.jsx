@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
+
 function MyActions() {
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
+  const [switchText, setSwitchText] = useState("");
+
+  useEffect(() => {
+    setSwitchText(language === "en" ? "Türkçe'ye geç" : "Switch to English");
+  }, [language]);
+
   return (
     <div className="fixed container mx-auto bg-header dark:bg-myDarkC py-4 z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
@@ -31,6 +40,12 @@ function MyActions() {
               : "Gece Modu"}
           </span>
           <span>|</span>
+          <button
+            onClick={toggleLanguage}
+            className="text-red-500 cursor-pointer hover:text-red-700"
+          >
+            {switchText}
+          </button>
         </div>
       </div>
     </div>
