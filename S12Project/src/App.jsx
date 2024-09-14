@@ -21,6 +21,22 @@ function App() {
       <Skills />
       <Project />
       <Footer />
+      <ThemeProvider>
+          <DataProvider>
+            <div className={theme === "dark" ? "dark-theme" : "light-theme"}>
+              <Header />
+              <Profile />
+              <Skills />
+              <Project />
+              <Footer />
+              <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+              />
+            </div>
+          </DataProvider>
+      </ThemeProvider>
     </>
   );
 }
