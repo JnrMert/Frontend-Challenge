@@ -5,7 +5,6 @@ import data from "../data/data";
 import { useLanguage } from "../context/LanguageContext";
 
 function Header() {
-  return <div>Header</div>;
   //dil
   const { language } = useLanguage();
   const { header } = data[language];
