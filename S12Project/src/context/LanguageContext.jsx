@@ -38,9 +38,16 @@ export const LanguageProvider = ({ children }) => {
     }
   }, [language]); // Dil değiştiğinde tetiklenir
 
+  // Dil değiştirme fonksiyonu
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => (prevLanguage === "en" ? "tr" : "en"));
+  };
 
   return (
+    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+      {children}
       <ToastContainer />
+    </LanguageContext.Provider>
   );
 };
 
